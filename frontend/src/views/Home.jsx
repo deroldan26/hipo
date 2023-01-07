@@ -9,16 +9,16 @@ export function Home() {
     return <>
         <Navbar />
         <div className='container'>
-            <div id="carouselExample" class="carousel slide" data-bs-ride="true" style={{margin: 'auto', padding: '54px 0'}}>
+            <div id="carouselExample" className="carousel slide" data-bs-ride="true" style={{margin: 'auto', padding: '54px 0'}}>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://www.petalatino.com/wp-content/uploads/horses-used-for-racing.jpg" class="d-block w-100" width="450" height="500"/>
+                        <img src="https://www.petalatino.com/wp-content/uploads/horses-used-for-racing.jpg" className="d-block w-100" width="450" height="500"/>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://4.bp.blogspot.com/-fU2ijx-NQr0/UKfCvCTnNUI/AAAAAAAAGdo/YWxx2u3xQqk/s1600/Cómo+seleccionar+un+caballo+de+carreras.bmp" class="d-block w-100" width="450" height="500"/>
+                        <img src="https://4.bp.blogspot.com/-fU2ijx-NQr0/UKfCvCTnNUI/AAAAAAAAGdo/YWxx2u3xQqk/s1600/Cómo+seleccionar+un+caballo+de+carreras.bmp" className="d-block w-100" width="450" height="500"/>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://www.anipedia.net/imagenes/carrera-caballos.jpg" class="d-block w-100" width="450" height="500"/>
+                        <img src="https://www.anipedia.net/imagenes/carrera-caballos.jpg" className="d-block w-100" width="450" height="500"/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

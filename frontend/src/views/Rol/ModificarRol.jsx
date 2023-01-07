@@ -41,7 +41,7 @@ function ModificarRol() {
                                 <input type="text" name="ID" id="ID" className="form__input" placeholder="ID" />
                             </div>
                             <div className='col-5' style={{ margin: 'auto' }}>
-                                <button type="button" class="btn btn-outline-info">Buscar ID Rol</button>
+                                <button type="button" className="btn btn-outline-info">Buscar ID Rol</button>
                             </div>
                         </div>
                         <div className="row">

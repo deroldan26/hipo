@@ -10,6 +10,9 @@ import 'sweetalert2/src/sweetalert2.scss'
 
 function LogIn() {
 
+  const [usuario, setUsuario] = useState ('')
+  const [contra, setContra] = useState ('')
+
   const Toast = Swal.mixin({
     toast: true,
     position: 'bottom-end',
@@ -55,14 +58,14 @@ function LogIn() {
               <div className="row">
                 <form control="" className="form-group">
                   <div className="row">
-                    <input type="text" name="Username" id="username" className="form__input" placeholder="Nombre de Usuario" />
+                    <input type="text" name="Username" id="username" className="form__input" placeholder="Nombre de Usuario" onChange={event => { setUsuario (event.target.value)}}/>
                   </div>
                   <div className="row">
                     <span className="fa fa-lock"></span>
-                    <input type="password" name="Password" id="password" className="form__input" placeholder="Contraseña" />
+                    <input type="password" name="Password" id="password" className="form__input" placeholder="Contraseña" onChange={event => { setContra (event.target.value)}}/>
                   </div>
                   <div className="row">
-                    <input type="submit" value="Entrar" id="btn" className="boton" onClick={() => { verificarLogin()}} />
+                    <input type="button" value="Entrar" id="btn" className="boton" onClick={() => { verificarLogin()}} />
                   </div>
                 </form>
               </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Navbar from '../Navbar';
 import "react-widgets/scss/styles.scss";
@@ -6,17 +6,30 @@ import Toast from '../../Scripts/Mensajes.js';
 
 function EliminarUsuario() {
 
+    const [ID, setID] = useState ('');
+    const [busco, setBusco] = useState(false);
     const navigate = useNavigate();
     var permisos = localStorage.getItem('Permisos')
     permisos = JSON.parse(permisos)
     const verificarDatos = () =>{
-        if((permisos.includes("Agregar Usuario"))){
-            Toast.fire({icon: 'success', title: 'Datos Agregados'})
-            //otro if para agregar los datos....
+        if(busco){
+            if((permisos.includes("Agregar Usuario"))){
+                Toast.fire({icon: 'success', title: 'Datos Agregados'})
+                //otro if para agregar los datos....
+            }else{
+                Toast.fire({icon: 'error', title: 'No Tienes Permiso'})
+            }
         }else{
-            Toast.fire({icon: 'error', title: 'No Tienes Permiso'})
+            Toast.fire({icon: 'error', title: 'Coloca un ID Valido'})
         }
         
+        
+    }
+
+    const buscar = () => {
+        //if para buscar el id
+        Toast.fire({icon: 'error', title: 'ID No Encontrado'})
+        setBusco(true);
     }
 
     return (
@@ -35,10 +48,10 @@ function EliminarUsuario() {
                     <div className='col-4' style={{ margin: 'auto' }}>
                         <div className='row'>
                             <div className='col-7' style={{ margin: 'auto' }}>
-                                <input type="text" name="Nombre de Usuario buscar" id="Nombre de Usuario buscar" className="form__input" placeholder="Nombre de Usuario" />
+                                <input type="text" name="Nombre de Usuario buscar" id="Nombre de Usuario buscar" className="form__input" placeholder="Nombre de Usuario" onChange={event => { setID (event.target.value)}}/>
                             </div>
                             <div className='col-4' style={{ margin: 'auto' }}>
-                                <button type="button" class="btn btn-outline-info">Buscar</button>
+                                <button type="button" className="btn btn-outline-info" onClick={buscar}>Buscar</button>
                             </div>
                         </div>
                         <div className="row">
