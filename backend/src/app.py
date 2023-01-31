@@ -2,10 +2,10 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
-app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://diyo:davix1026@localhost/hipoflaskdb'
-db=SQLAlchemy(app)
+app=Flask(__name__, instance_relative_config=True)
 CORS(app) #prevent cors error
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://diyo:davix1026@localhost/hipoflaskdb'
+db=SQLAlchemy(app) 
 
 class Usuario(db.Model):
     nombre_usuario = db.Column(db.String(20), primary_key=True)
@@ -67,6 +67,9 @@ def update_event(nombre_usuario):
 def page_not_found(error):
     return "<h1>Page not found</h1>", 404
 
+if __name__ == '__main__':
+    app.register_error_handler(404, page_not_found)
+    app.run()
 if __name__ == '__main__':
     app.register_error_handler(404, page_not_found)
     app.run()
