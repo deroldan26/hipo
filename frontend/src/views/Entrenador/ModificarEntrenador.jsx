@@ -45,7 +45,7 @@ function ModificarEntrenador() {
                                 <input type="text" name="ID" id="ID" className="form__input" placeholder="ID" />
                             </div>
                             <div className='col-5' style={{ margin: 'auto' }}>
-                                <button type="button" class="btn btn-outline-info">Buscar ID Entrenador</button>
+                                <button type="button" className="btn btn-outline-info">Buscar ID Entrenador</button>
                             </div>
                         </div>
                         <div className="row">
@@ -61,7 +61,7 @@ function ModificarEntrenador() {
                             <input type="text" name="PrimerApellido" id="PrimerApellido" className="form__input" placeholder="Primer Apellido" />
                         </div>
                         <div className="row">
-                            <input type="text" name="SegundoApellido" id="SegundoApellido" className="form__input" placeholder="Primer Apellido" />
+                            <input type="text" name="SegundoApellido" id="SegundoApellido" className="form__input" placeholder="Segundo Apellido" />
                         </div>
                         <div className="row">
                             <Combobox

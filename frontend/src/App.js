@@ -34,28 +34,27 @@ import VerListaRoles from './views/Rol/VerListaRoles';
 import AgregarRol from './views/Rol/AgregarRol';
 import ModificarRol from './views/Rol/ModificarRol';
 import EliminarRol from './views/Rol/EliminarRol';
-import VerListaRestaurantes from './views/Restaurante/VerListaRestaurantes';
-import AgregarRestaurante from './views/Restaurante/AgregarRestaurante';
-import ModificarRestaurante from './views/Restaurante/ModificarRestaurante';
-import EliminarRestaurante from './views/Restaurante/EliminarRestaurante';
-import VerListaImplementos from './views/Implemento/VerListaImplementos';
-import AgregarImplemento from './views/Implemento/AgregarImplemento';
-import ModificarImplmento from './views/Implemento/ModificarImplemento';
-import EliminarImplemento from './views/Implemento/EliminarImplemento';
-import VerListaRetiros from './views/Retiro/VerListaRetiros';
-import AgregarRetiro from './views/Retiro/AgregarRetiro';
-import ModificarRetiro from './views/Retiro/ModificarRetiro';
-import EliminarRetiro from './views/Retiro/EliminarRetiro';
-import VerListaInscripciones from './views/Inscripcion/VerListaInscripciones';
-import AgregarInscipcion from './views/Inscripcion/AgregarInscripcion';
-import ModificarInscripcion from './views/Inscripcion/ModificarInscipcion';
-import EliminarInscripcion from './views/Inscripcion/EliminarInscripcion';
-import GenerarReportes from './views/Reportes/GenerarReportes';
+import VerListaRestaurantes from './views/Restaurante/VerListaRestaurantes'
+import AgregarRestaurante from './views/Restaurante/AgregarRestaurante'
+import ModificarRestaurante from './views/Restaurante/ModificarRestaurante'
+import EliminarRestaurante from './views/Restaurante/EliminarRestaurante'
+import VerListaImplementos from './views/Implemento/VerListaImplementos'
+import AgregarImplemento from './views/Implemento/AgregarImplemento'
+import ModificarImplmento from './views/Implemento/ModificarImplemento'
+import EliminarImplemento from './views/Implemento/EliminarImplemento'
+import VerListaRetiros from './views/Retiro/VerListaRetiros'
+import AgregarRetiro from './views/Retiro/AgregarRetiro'
+import ModificarRetiro from './views/Retiro/ModificarRetiro'
+import EliminarRetiro from './views/Retiro/EliminarRetiro'
+import VerListaInscripciones from './views/Inscripcion/VerListaInscripciones'
+import AgregarInscipcion from './views/Inscripcion/AgregarInscripcion'
+import ModificarInscripcion from './views/Inscripcion/ModificarInscipcion'
+import EliminarInscripcion from './views/Inscripcion/EliminarInscripcion'
+import GenerarReportes from './views/Reportes/GenerarReportes'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from 'react';
 
 export function App() {
-  
   return <div className="App">
       <BrowserRouter>
         <Routes>
@@ -118,5 +117,6 @@ export function App() {
       </BrowserRouter>
   </div>
 }
+
 export default App;
 

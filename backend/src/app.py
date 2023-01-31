@@ -2,14 +2,16 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
-app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://diyo:davix1026@localhost/hipoflaskdb'
-db=SQLAlchemy(app)
+app=Flask(__name__, instance_relative_config=True)
 CORS(app) #prevent cors error
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://diyo:davix1026@localhost/hipoflaskdb'
+db=SQLAlchemy(app) 
 
 class Usuario(db.Model):
     nombre_usuario = db.Column(db.String(20), primary_key=True)
     contrasena_usuario = db.Column(db.String(20), nullable=False)
+    #FK_Persona = db.Column(db.Integer(20), nullable=False)
+
 
     def __repr__(self):
         return f"Event: {self.nombre_usuario}"

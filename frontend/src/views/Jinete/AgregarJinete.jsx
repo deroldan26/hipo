@@ -53,7 +53,7 @@ function AgregarJinete() {
                             <input type="text" name="PrimerApellido" id="PrimerApellido" className="form__input" placeholder="Primer Apellido" />
                         </div>
                         <div className="row">
-                            <input type="text" name="SegundoApellido" id="SegundoApellido" className="form__input" placeholder="Primer Apellido" />
+                            <input type="text" name="SegundoApellido" id="SegundoApellido" className="form__input" placeholder="Segundo Apellido" />
                         </div>
                         <div className="row">
                             <Combobox
