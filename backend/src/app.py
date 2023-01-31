@@ -2,10 +2,10 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
-app=Flask(__name__, instance_relative_config=True)
-CORS(app) #prevent cors error
+app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://diyo:davix1026@localhost/hipoflaskdb'
-db=SQLAlchemy(app) 
+db=SQLAlchemy(app)
+CORS(app) #prevent cors error
 
 class Usuario(db.Model):
     nombre_usuario = db.Column(db.String(20), primary_key=True)
