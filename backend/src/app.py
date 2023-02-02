@@ -28,8 +28,8 @@ def format_usuario(usuario):
 
 @app.route('/usuario', methods = ['POST'])
 def create_usuario():
-    nombre_usuario = request.json['nombre_usuario']
-    contrasena_usuario = request.json['contrasena_usuario']
+    nombre_usuario = request.json['usuario']
+    contrasena_usuario = request.json['contra']
     usuario = Usuario(nombre_usuario, contrasena_usuario)
     db.session.add(usuario)
     db.session.commit()
